@@ -480,7 +480,15 @@ a, button{transition:.25s;}
 
 
 /********** news **********/
-	
+#news article .header {
+    background-position: 50%;
+    background-size: cover;
+    color: #eae9de;
+    height: 320px;
+}
+
+
+
 	#news{padding-top:10px;display:flex;flex-wrap:wrap;}
 	#news > div{display:block;flex-basis:50%;max-width:50%;padding:10px;}
 	#news > div.first, #news.show > div{flex-basis:100%;max-width:100%;}
@@ -500,7 +508,31 @@ a, button{transition:.25s;}
 	#news article .bottom .btn{border-left:2px solid #201f1d;margin-top:0;height:100%;}
 	#news article .bottom .comment{color:#201f1d;}
 	#news article .bottom .comment:before{background:#c3beb6;}
+	main article .header time {
+		background: #202c24;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		display: inline-block;
+		font-size: 22px;
+		font-weight: 600;
+		left: 12px;
+		line-height: 14px;
+		padding: 13px 0 8px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 55px;
+	}
 
+/********** main **********/
+
+.mainlayout{
+    position: relative;
+    min-height: 100vh;
+    top: 0px;
+
+}
+           
+main article .header h2 img{margin:0 4px 0 -6px;vertical-align:-40%}main article .header{background-position:50%;background-size:cover;color:#eae9de;height:320px}main article .header time{background:#202c24;border-bottom-left-radius:3px;border-bottom-right-radius:3px;display:inline-block;font-size:22px;font-weight:600;left:12px;line-height:14px;padding:13px 0 8px;text-align:center;text-transform:uppercase;width:55px}main article .header time span{display:inline-block;font-size:14px;font-weight:300;width:100%}#news article .paragraphe{display:block;height:calc(26.2963px + 7.40741vw);overflow:hidden}main article .header h2{background:linear-gradient(0deg,#202c24 15%,transparent);bottom:0;color:#e4dbca;font-family:proxima-nova_bold,Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;letter-spacing:.5px;line-height:22px;padding:15px;position:absolute;text-shadow:0 0 5px #000,0 0 3px #000,0 0 1px #000;width:100%}
 
 /********** pagination **********/
 	
