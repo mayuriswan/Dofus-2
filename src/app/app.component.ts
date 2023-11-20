@@ -6,13 +6,15 @@ import { SliderComponent } from "./components/slider/slider.component";
 import { AsideComponent } from "./components/aside/aside.component";
 import { StatsComponent } from "./components/stats/stats.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { NewsComponent } from './pages/news/news.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, SliderComponent, AsideComponent, StatsComponent, FooterComponent]
+    imports: [HttpClientModule,NewsComponent,CommonModule, RouterOutlet, HeaderComponent, SliderComponent, AsideComponent, StatsComponent, FooterComponent]
 })
 export class AppComponent {
   title = 'ALIKEM';
