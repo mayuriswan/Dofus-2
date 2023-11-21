@@ -534,6 +534,10 @@ a, button{transition:.25s;}
            
 main article .header h2 img{margin:0 4px 0 -6px;vertical-align:-40%}main article .header{background-position:50%;background-size:cover;color:#eae9de;height:320px}main article .header time{background:#202c24;border-bottom-left-radius:3px;border-bottom-right-radius:3px;display:inline-block;font-size:22px;font-weight:600;left:12px;line-height:14px;padding:13px 0 8px;text-align:center;text-transform:uppercase;width:55px}main article .header time span{display:inline-block;font-size:14px;font-weight:300;width:100%}#news article .paragraphe{display:block;height:calc(26.2963px + 7.40741vw);overflow:hidden}main article .header h2{background:linear-gradient(0deg,#202c24 15%,transparent);bottom:0;color:#e4dbca;font-family:proxima-nova_bold,Helvetica,Arial,sans-serif;font-size:20px;font-weight:600;letter-spacing:.5px;line-height:22px;padding:15px;position:absolute;text-shadow:0 0 5px #000,0 0 3px #000,0 0 1px #000;width:100%}
 
+/********** form **********/
+
+main #content form label{color:#585951;display:block;font-family:Montserrat,proxima-nova_bold,Helvetica,Arial,sans-serif;font-size:14px;font-weight:800;line-height:14px;padding-bottom:10px;text-transform:uppercase}main #content form{margin:10px auto 0;width:100%}main #content form label small{display:block;font-family:proxima-nova_regular,Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;padding-bottom:10px;text-transform:none}main #content form input[type=number],main #content form input[type=password],main #content form input[type=text],main #content form textarea{background:#cec7bc;border:2px solid #69501e;font-family:proxima-nova_regular,Helvetica,Arial,sans-serif;font-size:14px;height:45px;margin-bottom:15px;padding:0 12px;width:250px}input[type=text]:disabled{background:#696868}
+
 /********** pagination **********/
 	
 	#pagination{height:55px;margin:10px;background:url(../img/motif.png) center center #2a2927;box-shadow:0 0 0 1px rgba(255,255,255,.02) inset, 0 5px 10px rgba(0,0,0,.05);flex:1;margin:10px 10px 20px;}

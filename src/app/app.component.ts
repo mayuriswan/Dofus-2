@@ -8,6 +8,9 @@ import { StatsComponent } from "./components/stats/stats.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { NewsComponent } from './pages/news/news.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes'; // assuming you store routes in app.routes.ts
+
 
 @Component({
     selector: 'app-root',
