@@ -107,4 +107,5 @@ export class LoginComponent {
   navigateToRegister() {
     this.router.navigate(['/registre']);
   }
+  
 }
