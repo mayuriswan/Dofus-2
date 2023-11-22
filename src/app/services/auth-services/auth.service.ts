@@ -5,8 +5,9 @@ import { Login } from '../../models/login.model';
 import { AuthResponse } from '../../models/auth-response.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TokenService } from '../token-service/token.service';
+import { environment } from '../../../environments/environment';
 
-const API_URL = 'https://localhost:7016/api/Auth/';
+const API_URL = `${environment.apiUrl}/Auth/`;
 
 @Injectable({
   providedIn: 'root'
