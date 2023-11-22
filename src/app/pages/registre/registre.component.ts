@@ -26,18 +26,18 @@ export class RegistreComponent {
     private formBuilder: FormBuilder,
     private router: Router,
     private tokenService: TokenService) {
-      {
-        this.registerForm = this.formBuilder.group({
-          pseudo: ['', Validators.required],
-          question_secrete: ['', Validators.required],
-          reponse_secrete: ['', Validators.required],
-          email: ['', [Validators.email, Validators.required]],
-          password: ['', [Validators.required, Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/)]],
-          confirmPassword: ['', Validators.required]
-        }, {
-          validators: MustMatch('password', 'confirmPassword')
-        });
-      }
+    {
+      this.registerForm = this.formBuilder.group({
+        pseudo: ['', Validators.required],
+        question_secrete: ['', Validators.required],
+        reponse_secrete: ['', Validators.required],
+        email: ['', [Validators.email, Validators.required]],
+        password: ['', [Validators.required, Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/)]],
+        confirmPassword: ['', Validators.required]
+      }, {
+        validators: MustMatch('password', 'confirmPassword')
+      });
+    }
   }
 
 
@@ -69,9 +69,14 @@ export class RegistreComponent {
           let userId = this.tokenService.getUserId();
           this.router.navigate(['/']);
         },
-        error: (authResponse) => {
-          console.log(authResponse);
+        error: (error) => {
           this.submitting = false;
+          if (error && error.error && error.error.message === 'Email already exists') {
+            this.errors.push('Email already exists');
+          } else {
+            this.errors.push('Email already exists');
+          }
+          this.scrollToTop();
         }
       });
   }

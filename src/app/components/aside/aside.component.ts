@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-aside',
@@ -9,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './aside.component.css'
 })
 export class AsideComponent {
+  constructor(private router: Router) {}
+
+  navigateToRegister() {
+    this.router.navigate(['/registre']);
+  }
 
 }

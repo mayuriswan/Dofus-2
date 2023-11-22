@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { SliderComponent } from "./components/slider/slider.component";
 import { AsideComponent } from "./components/aside/aside.component";
