@@ -6,36 +6,55 @@
                 <p>Créez un compte web Glory afin de gérer l'ensemble de vos comptes de jeu</p>
             </div>
             <br>
-            <!---->
-            <form>
+            <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <label for="email"><span>*</span> Email : <small>Vous servira à vous connecter au site.</small></label>
-                <input type="text" id="email">
-    
+                <input type="text" id="email" formControlName="email">
+                <div *ngIf="submitted && registerForm.controls['email'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['email'].errors['required']">Email is required</div>
+                  <div *ngIf="registerForm.controls['email'].errors['email']">Email must be a valid email address</div>
+                </div>
+
                 <label for="nickname"><span>*</span> Pseudo : <small>Vous identifie sur notre site</small></label>
-                <input type="text" id="nickname">
-    
+                <input type="text" id="nickname" formControlName="pseudo">
+                <div *ngIf="submitted && registerForm.controls['pseudo'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['pseudo'].errors['required']">*Pseudo  is required</div>
+                </div>
+
                 <label for="password"><span>*</span> Mot de passe <small>Utilisez un mot de passe sécurisé que vous n'avez jamais utilisé sur d'autres sites web</small></label>
-                <input type="password" id="password">
-    
+                <input type="password" id="password" formControlName="password">
+                <div *ngIf="submitted && registerForm.controls['password'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['password'].errors['required']">Password is required</div>
+                  <div *ngIf="registerForm.controls['password'].errors['pattern']">Password must contain at least one upper case
+                    letter, one lower case letter, one number and one special character, and be at least 6 characters long.
+                  </div>
+                </div>
+
                 <label for="password_confirmation" style="padding-bottom: 10px;"><span>*</span> Confirmer mot de passe : </label>
-                <input type="password" id="password_confirmation">
-    
+                <input type="password" id="password_confirmation" formControlName="confirmPassword">
+                <div *ngIf="submitted && registerForm.controls['confirmPassword'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['confirmPassword'].errors['required']">Confirm Password is required</div>
+                  <div *ngIf="registerForm.controls['confirmPassword'].errors['mustMatch']">Passwords must match</div>
+                </div>
+
                 <label for="secret_question"><span>*</span> Question secrète : <small>Choisissez une question secrète robuste. ( Sera utilisée sur vos comptes de jeu )</small></label>
-                <input type="text" id="secret_question">
-    
+                <input type="text" id="secret_question" formControlName="question_secrete">
+                <div *ngIf="submitted && registerForm.controls['question_secrete'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['question_secrete'].errors['required']">*First Name is required</div>
+                </div>
+
                 <label for="secret_answer"><span>*</span> Réponse secrète : <small>Choisissez une réponse secrète robuste. ( Sera utilisée sur vos comptes de jeu )</small></label>
-                <input type="text" id="secret_answer">
-    
+                <input type="text" id="secret_answer" formControlName="reponse_secrete">
+                <div *ngIf="submitted && registerForm.controls['reponse_secrete'].errors" class="invalid-feedback">
+                  <div *ngIf="registerForm.controls['reponse_secrete'].errors['required']">*First Name is required</div>
+                </div>
                 <br>
-    
                 <small>En créant un compte web <strong>Glory</strong>, vous acceptez nos <a target="_blank" href="https://play-glory.net/tos"><strong><u>Conditions d'utilisation</u></strong></a></small>
                 <br>
                 <br>
-    
                 <button class="btn"><span>Créer un compte web Glory</span><i class="fal fa-long-arrow-right"></i></button>
             </form>
         </div>
     </div>
-    
+
 
 </div>
