@@ -22,7 +22,7 @@
       <li>
         <a class="blue"><i class="fa fa-user-plus"></i>Créer un compte de jeu</a>
       </li>
-      <li *ngIf="isLoggedIn()">
+      <li *ngIf="!isLoggedIn()">
         <a class="link" (click)="navigateTologin()">
           <i class="fa-solid fa-user-lock"></i>Connexion
         </a>
@@ -35,7 +35,7 @@
     </div>
   </div>
   <div class="right">
-    <div *ngIf="!isLoggedIn()" title="" class="user user-auth">
+    <div *ngIf="isLoggedIn()" title="" class="user user-auth">
       <div class="user-title">Mon compte</div><i class="i-user"></i><span></span>
       <ul>
         <li><a href="https://play-glory.net/user/account">Mon compte</a></li>
@@ -45,7 +45,7 @@
         <li><button class="red" (click)="logout()"><span class="ico_close"></span> Déconnexion</button></li>
       </ul>
     </div>
-    <a *ngIf="isLoggedIn()" (click)="navigateTologin()">
+    <a *ngIf="!isLoggedIn()" (click)="navigateTologin()">
       <div data-open="log" class="user" title="Se connecter ?"><i class="fa-solid fa-user-lock"
           style="color: rgb(247, 188, 72); "></i>
       </div>
