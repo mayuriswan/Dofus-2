@@ -1,0 +1,67 @@
+header .right{
+    background: #69501e;
+}
+
+#news article .content {
+    padding: calc(25px);
+}
+
+.user-auth {
+    width: 170px!important; 
+    cursor: pointer;
+}
+
+.user-title {
+    color: white; 
+    font-weight: 500; 
+    font-family: 'Proxima', Helvetica, Arial, sans-serif;
+    display: block;
+}
+
+@media (max-width:768px) {
+    .user-auth {
+        width:80px!important;
+    }
+
+    .user-title{
+        display: none;
+    }
+}
+
+.alert-error, .alert-success {
+	margin: 10px 10px 0;
+}	
+
+.i-register{background-position:0 -58px;}
+
+
+main article h3 {
+    /* background: url("../img/puce_red.png") 5px 14px no-repeat; */
+    color: #ee5a12;
+    padding: 5px 12px;
+    padding: 0.5rem 1.2rem;
+    font-size: 26px;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat', 'proxima-nova_bold', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid #e5e0d8;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+  }
+
+  [class^="i-"], [class*=" i-"]{display:inline-block;width:46px;height:46px;}
+		.i-cart{background-position:0 158px;}
+		.i-user{background-position:0 -2154px;}
+		.i-home{background-position:0 -479px;}
+		.i-trophy{background-position:0 -419px;}
+		.i-market{background-position:0 -1381px;}
+		.i-tokens{background-position:0 -1628px;}
+		.i-discord{background-position:0 -2199px;}
+		.i-comment{background-position:0 -58px;}
+		.i-secure {background-position: 0 -1431px;}
