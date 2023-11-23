@@ -1,9 +1,9 @@
 
 
 export interface User {
-    UserId: string;
-    Pseudo: string;
+    userId: string;
+    pseudo:string;
     email: string;
-    createdAt: Date;
-    Question_Secrete : string ;
+    creationDate: Date;
+    question_Secrete : string ;
 }

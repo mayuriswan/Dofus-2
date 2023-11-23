@@ -39,7 +39,11 @@ export class RegistreComponent {
       });
     }
   }
-
+  ngOnInit(){
+      if(this.authService.isLoggedIn()) {
+      this.router.navigate(['/']);
+      }
+  }
 
   onSubmit() {
     this.submitted = true;

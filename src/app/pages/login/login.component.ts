@@ -44,6 +44,11 @@ export class LoginComponent {
       ],
     });
   }
+  ngOnInit(){
+    if(this.authService.isLoggedIn()) {
+    this.router.navigate(['/']);
+    }
+}
 
   onSubmit() {
     this.submitted = true;

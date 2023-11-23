@@ -28,8 +28,10 @@ export class ProfilComponent {
       this.router.navigate(['/login']);
     }
     // Get the user info
+    
     this.profileService.getAllUserInfo().subscribe({
       next: (user) => {
+        console.log(user);
         this.user = user;
       },
       error: (err) => {
@@ -45,15 +47,15 @@ export class ProfilComponent {
   }
   getTimeDifference(): string {
     const now = new Date();
-    const createdAtDate = new Date(this.user?.createdAt as Date);
+    const createdAtDate = new Date(this.user?.creationDate as Date);
     const timeDifference = Math.abs(now.getTime() - createdAtDate.getTime());
     const hoursDifference = Math.floor(timeDifference / (1000 * 3600));
     
     if (hoursDifference < 24) {
-      return `il y a ${hoursDifference} heure${hoursDifference !== 1 ? 's' : ''}`;
+      return ` ${hoursDifference} heure${hoursDifference !== 1 ? 's' : ''}`;
     } else {
       const daysDifference = Math.floor(hoursDifference / 24);
-      return `il y a ${daysDifference} jour${daysDifference !== 1 ? 's' : ''}`;
+      return ` ${daysDifference} jour${daysDifference !== 1 ? 's' : ''}`;
     }
   }
 }
