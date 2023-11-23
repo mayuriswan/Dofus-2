@@ -1,0 +1,133 @@
+<div class="content">
+  <div class="title">
+    <div class="left"><i aria-label="" class="i-user" title=""></i></div>
+    <div class="right">
+      <h1>Gestion de compte : {{user?.Pseudo}}</h1>
+      <nav aria-label="breadcrumb">
+        <ul>
+          <li><a href="#" title="Authentification">Mon compte web</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!---->
+  <div class="default notPad" data-group="account" id="acc">
+    <div class="ct">
+      <ul class="parts">
+        <li class="active" data-group-id="account" data-part-id="account">
+          <a class="btn btn-secondary">
+            <span>Mon compte web</span>
+          </a>
+        </li>
+        <li data-group-id="account" data-part-id="account">
+          <a class="btn btn-secondary" href="https://play-glory.net/user/game-accounts/all">
+            <span>Mes comptes de jeu</span>
+          </a>
+        </li>
+        <li data-group-id="account" data-part-id="persos">
+          <a class="btn btn-secondary" href="https://play-glory.net/user/account/authorized_connections">
+            <span>Connexions Autorisées</span>
+          </a>
+        </li>
+      </ul>
+      <div class="active" data-part="account">
+        <table class="tble params">
+          <thead>
+            <tr>
+              <th colspan="2">Infos</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ico"><i class="fal fa-user"></i></td>
+              <td width="200px">Pseudo :</td>
+              <td>{{user?.Pseudo}}</td>
+            </tr>
+            <tr>
+              <td class="ico"><i class="fal fa-user"></i></td>
+              <td>Ogrines possédé :</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td class="ico"><i class="fal fa-envelope"></i></td>
+              <td>Date de création :</td>
+              <td>il y a {{ getTimeDifference() }} jour</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <div class="left"><i aria-label="" class="i-secure" title=""></i></div>
+    <div class="right">
+      <h1>Modifier le mot de passe du compte web : {{user?.Pseudo}}</h1>
+      <nav aria-label="breadcrumb">
+        <ul>
+          <li><a title="Modifiez votre compte web">Modifiez votre compte web </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="content">
+    <div id="join" class="default">
+      <div class="ct">
+        <div id="middle">
+          <h2>Modifier le mot de passe de mon compte web</h2>
+          <p class="alert-infos">
+            <span class="ico_info"></span> Un email sera envoyé pour confirmer votre changement de mot de passe
+          </p>
+          <br>
+          <form>
+            <label for="account-password"><span>*</span> Nouveau mot de passe :</label>
+            <input class="form-control" id="password" placeholder="**********" type="password">
+            <label for="account-password-repeat"><span>*</span> Confirmer nouveau mot de passe :</label>
+            <input class="form-control" id="password_confirmation" placeholder="**********" type="password">
+            <label for="account-qs"><span>*</span> Question secrète :</label>
+            <input class="form-control" disabled="" id="secret_question" name="secret_question" placeholder="" type="text" value="{{user?.Question_Secrete}}">
+            <label for="account-rs"><span>*</span> Réponse secrète :</label>
+            <input class="form-control" id="secret_answer" placeholder="Entrez votre réponse secrète ici" type="text">
+            <br>
+            <button class="btn">
+              <span>Confirmer le changement de mot de passe </span>
+              <i class="fal fa-long-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <div class="left"><i aria-label="" class="i-market" title=""></i></div>
+    <div class="right">
+      <h1>Historique des donations du compte web {{user?.Pseudo}}</h1>
+      <nav aria-label="breadcrumb">
+        <ul>
+          <li><a title="Consultez vos 30 derniers dons">Consultez vos 30 dernières donations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="content">
+    <div id="join" class="default">
+      <div class="ct">
+        <div class="history">
+          <p class="alert-infos">
+            <span class="ico_info"></span> Seuls les 30 derniers dons y figurent
+          </p>
+          <table class="tble params" data-add-th="">
+            <thead>
+              <tr>
+                <th>Détails</th>
+                <th width="150px">Date</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

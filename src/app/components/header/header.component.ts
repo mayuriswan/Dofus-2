@@ -18,6 +18,9 @@ export class HeaderComponent {
   navigateTologin() {
     this.router.navigate(['/login']);
   }
+  navigateToProfil() {
+    this.router.navigate(['/profil']);
+  }
   navigateTohome() {
     this.router.navigate(['/']);
   }

@@ -36,9 +36,9 @@
   </div>
   <div class="right">
     <div *ngIf="isLoggedIn()" title="" class="user user-auth">
-      <div class="user-title">Mon compte</div><i class="i-user"></i><span></span>
+      <div class="user-title"  >Mon compte</div><i class="i-user"></i><span></span>
       <ul>
-        <li><a href="https://play-glory.net/user/account">Mon compte</a></li>
+        <li><a  (click)="navigateToProfil()">Mon compte</a></li>
         <li></li>
         <li><a href="https://play-glory.net/user/game-accounts/all">Mes comptes de jeu</a></li>
         <li><a class="blue" href="https://play-glory.net/user/game-accounts/new">Créer un compte de jeu</a></li>

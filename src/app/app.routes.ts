@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { RegistreComponent } from './pages/registre/registre.component';
 import { NewsComponent } from './pages/news/news.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProfilComponent } from './pages/profil/profil.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 export const routes: Routes = [
@@ -9,4 +11,6 @@ export const routes: Routes = [
     { path: 'registre', component: RegistreComponent },
     {path:'login', component: LoginComponent},
     { path: '', component: NewsComponent },
+    {path:'profil', component: ProfilComponent,    canActivate:[AuthGuard],
+  },
   ];
