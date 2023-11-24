@@ -33,15 +33,7 @@ export class LoginComponent {
   ) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.email, Validators.required]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(
-            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/
-          ),
-        ],
-      ],
+      password: ['', [Validators.required]],
     });
   }
   ngOnInit(){
@@ -51,12 +43,10 @@ export class LoginComponent {
 }
 
   onSubmit() {
+    console.log(this.loginForm.value);
     this.submitted = true;
     this.errors = [];
-    if (this.loginForm.invalid) {
-      this.populateErrors();
-      return;
-    }
+   
     const loginRequest: Login = {
       email: this.loginForm.value.email,
       password: this.loginForm.value.password,
@@ -66,9 +56,11 @@ export class LoginComponent {
 
     this.authService.login(loginRequest).subscribe({
       next: (authResponse) => {
+        console.log(this.loginForm.value);
+
         this.tokenService.saveToken(authResponse.token);
         // routing to home page
-        this.router.navigate(['/']);
+        this.router.navigate(['/profil']);
       },
       error: () => {
         // stop loading

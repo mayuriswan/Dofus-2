@@ -71,7 +71,7 @@ export class RegistreComponent {
           // saving token in local storage
           this.tokenService.saveToken(authResponse.token)
           let userId = this.tokenService.getUserId();
-          this.router.navigate(['/']);
+          this.router.navigate(['/profil']);
         },
         error: (error) => {
           this.submitting = false;
