@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { environment } from '../../environments/environment';
-import { TokenService } from './token-service/token.service';
 import { HttpHeaders } from '@angular/common/http';
+import { TokenService } from './token-service/token.service';
 const API_URL = `${environment.apiUrl}`;
 
 @Injectable({

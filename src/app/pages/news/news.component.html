@@ -1,5 +1,5 @@
 
-<div class="title"><div class="left"><i class="i-home" aria-label="" title=""></i></div><div class="right"><h1>Nos dernières actualités</h1><nav aria-label="breadcrumb"><ul><li><a href="#" title="Accueil">Accueil</a></li></ul></nav></div></div>
+<div class="title"><div class="left"><i class="i-home" aria-label="" title=""></i></div><div class="right"><h1>Nos dernières actualités</h1><nav aria-label="breadcrumb"><ul><li><a href="" title="Accueil">Accueil</a></li></ul></nav></div></div>
 <div id="content">
   <div id="news" >
     <div class="show" *ngFor="let new of news">
@@ -10,12 +10,12 @@
           <h2><img src="../../../assets/i_news.png">{{new.title}}</h2>
         </div>
         <div class="content">
-          <div class="paragraphe">
-          {{new.content}}
+          <div [innerHTML]="sanitizeHtml(new.content)" class="paragraphe">
+          
           </div>
         </div>
-        <div class="bottom"><span>{{ new.date | date: 'dd MMM yyyy, HH:mm:ss' }}</span><a class="btn comment"
-            href="https://play-glory.net/articles/216/rotation-des-apparats-semaine-34"><i class="fa fa-comments"></i></a>
+        <div class="bottom"><span>{{ new.date | date: 'dd MMM yyyy, HH:mm:ss' }}</span><a class="btn comment" (click)="navigateToNewsDetails(new)" 
+            ><i class="fa fa-comments"></i></a>
         </div>
       </article>
     </div>

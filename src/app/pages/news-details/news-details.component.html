@@ -1,0 +1,35 @@
+<section class="wrapper">
+    <div class="content">
+      <div class="title">
+        <!-- Display news details title and breadcrumb -->
+        <div class="left"><i class="i-user" aria-label="title" title="{{news?.title}}"></i></div>
+        <div class="right">
+          <h1>{{news?.title}}</h1>
+          <nav aria-label="breadcrumb">
+            <ul>
+                <li><a (click)="navigateToHome()" title="Accueil">Accueil</a></li>
+                <li><a (click)="navigateToNews()" title="News">Actualités</a></li>
+                
+              <li><a href="#" title="{{news?.title}}" aria-current="page">{{news?.title}}</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div *ngIf="news" id="news" class="show">
+        <div class="show">
+          <article>
+            <img [src]="news.image" alt="{{news.title}}">
+            <div class="content">
+              <div [innerHTML]="sanitizeHtml(news.content)" class="paragraphe">
+                
+              </div>
+            </div>
+            <div class="bottom">
+              <span><span>Publié le {{news.date | date:'dd MMM yyyy, HH:mm:ss'}} par <strong>{{news.author}}</strong>.</span></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  
